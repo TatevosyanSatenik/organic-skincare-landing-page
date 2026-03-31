@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Skincare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+  
+<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F6F3EE;
+    color: #1A1A1A;
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 80px 10%;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* TEXT */
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #1F3D2B;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #1F3D2B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #6BAF92;
+}
+
+/* IMAGE */
+.hero-image img {
+    width: 400px;
+    max-width: 100%;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+}
+  
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+            
+            <!-- TEXT -->
+            <div class="hero-text">
+                <h1>Pure Nature for Your Skin</h1>
+                <p>
+                    Discover the power of organic ingredients. 
+                    Hydrate, repair, and glow naturally with our skincare cream.
+                </p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="hero-image">
+                <img src="your-image.jpg" alt="Skincare Product">
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
