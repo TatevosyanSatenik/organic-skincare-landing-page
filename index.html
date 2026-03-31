@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Organic Skincare</title>
 
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
@@ -13,89 +17,161 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #F6F3EE;
+    font-family: 'Poppins', sans-serif;
+    background: #f9faf9;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* HERO */
+/* ===== CONTAINER ===== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #6BBF59;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #4fa443;
+    transform: translateY(-2px);
+}
+
+/* ===== HERO SECTION ===== */
 .hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 8%;
-    background: #F6F3EE;
-}
-
-/* CONTAINER */
-.hero-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    padding: 80px 0;
+    gap: 40px;
 }
 
-/* TEXT (LEFT) */
 .hero-text {
-    max-width: 500px;
+    flex: 1;
 }
 
 .hero-text h1 {
     font-size: 48px;
-    color: #1F3D2B;
-    text-transform: uppercase;
-    line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .hero-text p {
-    font-size: 18px;
-    color: #555;
     margin-bottom: 30px;
+    color: #666;
 }
 
-/* BUTTON */
-.btn {
-    padding: 14px 32px;
-    background: #1F3D2B;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #6BAF92;
-}
-
-/* IMAGE (RIGHT) */
-.hero-image {
+.hero img {
     flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.hero-image img {
-    width: 420px;
-    max-width: 100%;
+    width: 100%;
     border-radius: 20px;
 }
 
-/* EXTRA RIGHT SPACE (like your reference) */
-.hero-image {
-    padding-left: 80px;
+/* ===== ABOUT SECTION ===== */
+.about {
+    padding: 80px 0;
+    display: flex;
+    gap: 40px;
+    align-items: center;
 }
 
-/* MOBILE */
-@media(max-width: 768px) {
-    .hero-container {
+.about img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #666;
+}
+
+/* ===== FEATURES SECTION ===== */
+.features {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.feature img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact p {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #eef3ee;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .hero, .about {
         flex-direction: column;
         text-align: center;
     }
 
-    .hero-image {
-        padding-left: 0;
-        margin-top: 30px;
-        justify-content: center;
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero-text h1 {
@@ -107,25 +183,77 @@ body {
 
 <body>
 
-<section class="hero">
-    <div class="hero-container">
+<!-- ===== HERO SECTION ===== -->
+<section class="hero container">
+    <div class="hero-text">
+        <h1>Pure Organic Skincare</h1>
+        <p>Glow naturally with our clean, eco-friendly skincare products made from 100% organic ingredients.</p>
+        <a href="#" class="btn">Shop Now</a>
+    </div>
+    <img src="https://cdn.shopify.com/s/files/1/0727/3948/7919/files/efeb94f0e623e9e241822326c78e214a_1.jpg?v=1774958764" alt="">
+</section>
 
-        <!-- TEXT -->
-        <div class="hero-text">
-            <h1>Skincare for Healthy & Glowing Skin</h1>
-            <p>
-                Discover the power of natural ingredients and achieve radiant, hydrated skin every day.
-            </p>
-            <a href="#" class="btn">Shop Now</a>
+<!-- ===== ABOUT SECTION ===== -->
+<section class="about container">
+    <img src="https://cdn.shopify.com/s/files/1/0727/3948/7919/files/6c4410de3863928311cdc8f80667efbc_24d101ea-1aeb-4b64-a5ba-aa41508fb335.jpg?v=1774958764" alt="">
+    <div class="about-text">
+        <h2>About Our Brand</h2>
+        <p>We believe skincare should be simple, natural, and effective. Our products are crafted with carefully selected organic ingredients to nourish your skin without harmful chemicals.</p>
+    </div>
+</section>
+
+<!-- ===== FEATURES SECTION ===== -->
+<section class="features container">
+    <h2>Why Choose Us</h2>
+    <div class="feature-grid">
+        
+        <div class="feature">
+            <img src="https://cdn.shopify.com/s/files/1/0727/3948/7919/files/5fc0ce89ddc59c864b8c0d6cf43272d7.jpg?v=1774956853">
+            <h3>100% Organic</h3>
+            <p>No chemicals, only nature.</p>
         </div>
 
-        <!-- IMAGE -->
-        <div class="hero-image">
+        <div class="feature">
+            <img src="https://cdn.shopify.com/s/files/1/0727/3948/7919/files/6c4410de3863928311cdc8f80667efbc.jpg?v=1774956853">
+            <h3>Eco Friendly</h3>
+            <p>Sustainable and planet-safe packaging.</p>
+        </div>
+
+        <div class="feature">
+            <img src="https://cdn.shopify.com/s/files/1/0727/3948/7919/files/913da75c9c903478354bf257417f7f5c.jpg?v=1774956853">
+            <h3>Dermatologist Tested</h3>
+            <p>Safe for all skin types.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== EXTRA IMAGE SHOWCASE ===== -->
+<section class="features container">
+    <div class="feature-grid">
+        
+        <div class="feature">
+            <img src="https://cdn.shopify.com/s/files/1/0727/3948/7919/files/bb08370bb35fc2533b837c7bf99201fe.jpg?v=1774956853">
+        </div>
+
+        <div class="feature">
             <img src="https://cdn.shopify.com/s/files/1/0727/3948/7919/files/31d2c186b5fb2a9d3cc6e7a48b261977.jpg?v=1774956853">
         </div>
 
     </div>
 </section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="contact container">
+    <h2>Get in Touch</h2>
+    <p>Have questions? We'd love to hear from you.</p>
+    <a href="#" class="btn">Contact Us</a>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    © 2026 Organic Skincare. All rights reserved.
+</footer>
 
 </body>
 </html>
