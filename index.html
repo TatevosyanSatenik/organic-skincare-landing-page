@@ -1,101 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organic Skincare</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organic Skincare</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #F6F3EE;
+}
 
-        /* HERO SECTION */
-        .hero {
-            height: 100vh;
-            background: url('https://cdn.shopify.com/s/files/1/0727/3948/7919/files/efeb94f0e623e9e241822326c78e214a_1.jpg?v=1774958764') no-repeat center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    background: #F6F3EE;
+}
 
-        /* DARK OVERLAY */
-        .hero::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.35);
-            top: 0;
-            left: 0;
-        }
+/* CONTAINER */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
 
-        /* CONTENT */
-        .hero-content {
-            position: relative;
-            text-align: center;
-            color: #fff;
-            max-width: 700px;
-            padding: 20px;
-        }
+/* TEXT (LEFT) */
+.hero-text {
+    max-width: 500px;
+}
 
-        .hero-content h1 {
-            font-size: 48px;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
+.hero-text h1 {
+    font-size: 48px;
+    color: #1F3D2B;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
 
-        .hero-content p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: #e0e0e0;
-        }
+.hero-text p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
 
-        /* BUTTON */
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            background-color: #6BAF92;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 30px;
-            transition: 0.3s;
-        }
+/* BUTTON */
+.btn {
+    padding: 14px 32px;
+    background: #1F3D2B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
 
-        .btn:hover {
-            background-color: #1F3D2B;
-        }
+.btn:hover {
+    background: #6BAF92;
+}
 
-        /* MOBILE */
-        @media(max-width: 768px) {
-            .hero-content h1 {
-                font-size: 32px;
-            }
-        }
+/* IMAGE (RIGHT) */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
 
-    </style>
+.hero-image img {
+    width: 420px;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+/* EXTRA RIGHT SPACE (like your reference) */
+.hero-image {
+    padding-left: 80px;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        padding-left: 0;
+        margin-top: 30px;
+        justify-content: center;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
+<section class="hero">
+    <div class="hero-container">
+
+        <!-- TEXT -->
+        <div class="hero-text">
             <h1>Skincare for Healthy & Glowing Skin</h1>
             <p>
-                Natural ingredients. Visible results. Feel confident in your skin every day.
+                Discover the power of natural ingredients and achieve radiant, hydrated skin every day.
             </p>
             <a href="#" class="btn">Shop Now</a>
         </div>
-    </section>
+
+        <!-- IMAGE -->
+        <div class="hero-image">
+            <img src="https://cdn.shopify.com/s/files/1/0727/3948/7919/files/31d2c186b5fb2a9d3cc6e7a48b261977.jpg?v=1774956853">
+        </div>
+
+    </div>
+</section>
 
 </body>
 </html>
