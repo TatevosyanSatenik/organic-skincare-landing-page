@@ -4,105 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organic Skincare</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-  
-<body>
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        body {
+            font-family: Arial, sans-serif;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #F6F3EE;
-    color: #1A1A1A;
-}
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            background: url('https://cdn.shopify.com/s/files/1/0727/3948/7919/files/31d2c186b5fb2a9d3cc6e7a48b261977.jpg?v=1774956853') no-repeat center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
 
-/* HERO SECTION */
-.hero {
-    padding: 80px 10%;
-}
+        /* DARK OVERLAY */
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.35);
+            top: 0;
+            left: 0;
+        }
 
-.hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
+        /* CONTENT */
+        .hero-content {
+            position: relative;
+            text-align: center;
+            color: #fff;
+            max-width: 700px;
+            padding: 20px;
+        }
 
-/* TEXT */
-.hero-text {
-    max-width: 500px;
-}
+        .hero-content h1 {
+            font-size: 48px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
 
-.hero-text h1 {
-    font-size: 48px;
-    color: #1F3D2B;
-    margin-bottom: 20px;
-}
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
 
-.hero-text p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #444;
-}
+        /* BUTTON */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: #6BAF92;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
 
-/* BUTTON */
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    background-color: #1F3D2B;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: 0.3s;
-}
+        .btn:hover {
+            background-color: #1F3D2B;
+        }
 
-.btn:hover {
-    background-color: #6BAF92;
-}
+        /* MOBILE */
+        @media(max-width: 768px) {
+            .hero-content h1 {
+                font-size: 32px;
+            }
+        }
 
-/* IMAGE */
-.hero-image img {
-    width: 400px;
-    max-width: 100%;
-}
+    </style>
+</head>
 
-/* MOBILE */
-@media(max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
+<body>
 
-    .hero-text h1 {
-        font-size: 32px;
-    }
-}
-    </style>  
     <!-- HERO SECTION -->
     <section class="hero">
-        <div class="hero-container">
-            
-            <!-- TEXT -->
-            <div class="hero-text">
-                <h1>Pure Nature for Your Skin</h1>
-                <p>
-                    Discover the power of organic ingredients. 
-                    Hydrate, repair, and glow naturally with our skincare cream.
-                </p>
-                <a href="#" class="btn">Shop Now</a>
-            </div>
-
-            <!-- IMAGE -->
-            <div class="hero-image">
-                <img src="https://cdn.shopify.com/s/files/1/0727/3948/7919/files/31d2c186b5fb2a9d3cc6e7a48b261977.jpg?v=1774956853" alt="Skincare Product">
-            </div>
-
+        <div class="hero-content">
+            <h1>Skincare for Healthy & Glowing Skin</h1>
+            <p>
+                Natural ingredients. Visible results. Feel confident in your skin every day.
+            </p>
+            <a href="#" class="btn">Shop Now</a>
         </div>
     </section>
 
