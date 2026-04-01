@@ -344,6 +344,38 @@ footer {
     border-radius: 10px;
     margin-bottom: 15px;
 }
+    /* ===== SPLIT TEXT SECTION ===== */
+.statement {
+    padding: 120px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+/* BIG TEXT */
+.statement-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #2f3e34;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+/* SMALL TEXT */
+.statement-desc {
+    max-width: 700px;
+    margin: auto;
+    font-size: 16px;
+    color: #6b7d73;
+    line-height: 1.8;
+}
+    .statement-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #5f8f6b;
+    margin: 20px auto;
+}
 </style>
 </head>
 
@@ -444,16 +476,21 @@ footer {
 </section>
 
 <!-- ===== EXTRA IMAGE SHOWCASE ===== -->
-<section class="features container">
-    <div class="feature-grid">
-        
-        <div class="feature">
-            <img src="https://cdn.shopify.com/s/files/1/0727/3948/7919/files/bb08370bb35fc2533b837c7bf99201fe.jpg?v=1774956853">
-        </div>
+<section class="statement">
+    <div class="container">
 
-        <!-- <div class="feature">
-            <img src="https://cdn.shopify.com/s/files/1/0727/3948/7919/files/31d2c186b5fb2a9d3cc6e7a48b261977.jpg?v=1774956853">
-        </div> -->
+        <h2 class="statement-title">
+            Pure skincare<br>
+            made for real skin
+        </h2>
+
+        <p class="statement-desc">
+            We believe that skincare should be honest, simple, and effective.
+            Our products are carefully crafted using organic ingredients that
+            work in harmony with your skin. No harsh chemicals, no unnecessary
+            additives — just clean formulas designed to nourish, protect, and
+            restore your natural glow.
+        </p>
 
     </div>
 </section>
