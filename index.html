@@ -366,6 +366,90 @@ footer {
 
     animation: fadeUp 1s ease forwards;
 }
+    /* ===== RESULTS SECTION ===== */
+.results {
+    padding: 120px 20px;
+    background: #f4f7f4;
+}
+
+/* layout */
+.results-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* cards */
+.result-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* diagonal effect */
+.before {
+    transform: translateY(40px);
+}
+
+.after {
+    transform: translateY(-40px);
+}
+
+/* images */
+.result-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* label */
+.label {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+/* text */
+.results-text {
+    grid-column: span 2;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+.results-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #2f3e34;
+    margin-bottom: 20px;
+}
+
+.results-text p {
+    color: #6b7d73;
+    line-height: 1.8;
+}
+
+/* responsive */
+@media(max-width: 900px) {
+    .results-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .before, .after {
+        transform: none;
+    }
+
+    .results-text {
+        grid-column: auto;
+    }
+}
 </style>
 </head>
 
@@ -486,7 +570,35 @@ footer {
         </div>
     </div>
 </section>
+    
+<section class="results">
+    <div class="container results-wrapper">
 
+        <!-- BEFORE -->
+        <div class="result-card before">
+            <img src="https://cdn.shopify.com/s/files/1/0727/3948/7919/files/31d2c186b5fb2a9d3cc6e7a48b261977.jpg?v=1774956853" alt="">
+            <span class="label">Before</span>
+        </div>
+
+        <!-- TEXT -->
+        <div class="results-text">
+            <h2>Visible Results, Naturally</h2>
+            <p>
+                Our formulas are designed to restore balance and bring out your skin’s
+                natural glow. With consistent use, you’ll notice smoother texture,
+                improved hydration, and a healthier appearance — without harsh chemicals.
+            </p>
+        </div>
+
+        <!-- AFTER -->
+        <div class="result-card after">
+            <img src="https://cdn.shopify.com/s/files/1/0727/3948/7919/files/913da75c9c903478354bf257417f7f5c.jpg?v=1774956853" alt="">
+            <span class="label">After</span>
+        </div>
+
+    </div>
+</section>
+    
 <!-- ===== CONTACT SECTION ===== -->
 <section class="contact container">
     <h2>Get in Touch</h2>
